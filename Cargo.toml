@@ -2,6 +2,8 @@
 name = "linku-sona"
 version = "0.1.0"
 edition = "2021"
+description = "Types from https://www.npmjs.com/package/@kulupu-linku/sona ported to rust."
+license = "GPL-3.0"
 
 [dependencies]
 serde = { version = "1.0.197", features = ["derive"] }
