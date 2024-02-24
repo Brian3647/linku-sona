@@ -288,6 +288,25 @@ pub enum Direction {
 	Rtl,
 }
 
+impl From<&str> for Direction {
+	fn from(s: &str) -> Self {
+		match s {
+			"ltr" => Direction::Ltr,
+			_ => Direction::Rtl,
+		}
+	}
+}
+
+impl ToString for Direction {
+	fn to_string(&self) -> String {
+		match self {
+			Direction::Ltr => "ltr",
+			Direction::Rtl => "rtl",
+		}
+		.into()
+	}
+}
+
 #[derive(Deserialize, Serialize, Debug)]
 pub struct LangName {
 	en: String,
