@@ -8,3 +8,5 @@ so you can use them with any serde-compatible format. All fields are public, so 
 
 Do note that string literals (like in `<Word>.book`) have all been converted to enums (`Book` in
 this case) for better type safety, but you can get the original string with `to_string()`.
+
+If something's wrong or missing, please open an issue or a pull request.
