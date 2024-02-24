@@ -159,6 +159,14 @@ pub struct PuVerbatim {
 }
 
 #[derive(Deserialize, Serialize, Debug)]
+pub struct Translation {
+	pub commentary: String,
+	pub definition: String,
+	pub etymology: Vec<InnerEtymologyTranslation>,
+	pub sp_etymology: String,
+}
+
+#[derive(Deserialize, Serialize, Debug)]
 pub struct Word {
 	pub id: String,
 	pub author_verbatim: String,
@@ -179,6 +187,7 @@ pub struct Word {
 	pub audio: Vec<Audio>,
 	pub pu_verbatim: Option<PuVerbatim>,
 	pub usage: HashMap<String, u8>,
+	pub translations: HashMap<String, Translation>,
 }
 
 pub type Words = HashMap<String, Word>;
