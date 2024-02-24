@@ -181,6 +181,8 @@ pub struct Word {
 	pub usage: HashMap<String, u8>,
 }
 
+pub type Words = HashMap<String, Word>;
+
 pub type CommentaryTranslation = HashMap<String, String>;
 pub type DefinitionTranslation = HashMap<String, String>;
 pub type SitelenPonaTranslation = HashMap<String, String>;
@@ -221,9 +223,11 @@ pub struct Sign {
 	pub etymology: Vec<SignEtymology>,
 	pub signwriting: SignWriting,
 	pub video: Video,
+	pub translations: ParametersTranslation,
 }
 
 pub type FingerspellingSign = Sign;
+pub type Signs = HashMap<String, Sign>;
 
 #[derive(Deserialize, Serialize, Debug)]
 pub struct InnerParametersTranslation {
